@@ -145,7 +145,7 @@ class SVDEstimator():
         dotps = [np.dot(*self.transformer.components_[[i, j]])
             for (i, j) in itertools.combinations(range(self.n_components), 2)]
         if not np.allclose(dotps, 0, atol=1e-4):
-            print('IPCA components not orghogonal, max dot', np.abs(dotps).max())
+            print('SVD components not orghogonal, max dot', np.abs(dotps).max())
 
         self.transformer.mean_ = X.mean(axis=0, keepdims=True)
 
