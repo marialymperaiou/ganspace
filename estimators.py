@@ -110,7 +110,7 @@ class PCAEstimator():
         dotps = [np.dot(*self.transformer.components_[[i, j]])
             for (i, j) in itertools.combinations(range(self.n_components), 2)]
         if not np.allclose(dotps, 0, atol=1e-4):
-            print('IPCA components not orghogonal, max dot', np.abs(dotps).max())
+            print('IPCA components not orthogonal, max dot', np.abs(dotps).max())
 
         self.transformer.mean_ = X.mean(axis=0, keepdims=True)
 
@@ -145,7 +145,7 @@ class SVDEstimator():
         dotps = [np.dot(*self.transformer.components_[[i, j]])
             for (i, j) in itertools.combinations(range(self.n_components), 2)]
         if not np.allclose(dotps, 0, atol=1e-4):
-            print('IPCA components not orghogonal, max dot', np.abs(dotps).max())
+            print('SVD components not orthogonal, max dot', np.abs(dotps).max())
 
         self.transformer.mean_ = X.mean(axis=0, keepdims=True)
 
@@ -187,7 +187,7 @@ class FacebookPCAEstimator():
         dotps = [np.dot(*self.transformer.components_[[i, j]])
             for (i, j) in itertools.combinations(range(self.n_components), 2)]
         if not np.allclose(dotps, 0, atol=1e-4):
-            print('FBPCA components not orghogonal, max dot', np.abs(dotps).max())
+            print('FBPCA components not orthogonal, max dot', np.abs(dotps).max())
 
         self.transformer.mean_ = X.mean(axis=0, keepdims=True)
         
@@ -233,7 +233,7 @@ class SPCAEstimator():
         dotps = [np.dot(*self.transformer.components_[[i, j]])
             for (i, j) in itertools.combinations(range(self.n_components), 2)]
         if not np.allclose(dotps, 0, atol=1e-4):
-            print('SPCA components not orghogonal, max dot', np.abs(dotps).max())
+            print('SPCA components not orthogonal, max dot', np.abs(dotps).max())
 
     def get_components(self):
         var_ratio = self.stdev**2 / self.total_var
