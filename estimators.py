@@ -9,7 +9,6 @@
 # governing permissions and limitations under the License.
 
 from sklearn.decomposition import FastICA, PCA, IncrementalPCA, MiniBatchSparsePCA, SparsePCA, KernelPCA
-from sklearn.decomposition import PCA as RandomizedPCA
 import fbpca
 import numpy as np
 import itertools
@@ -125,7 +124,7 @@ class RPCAEstimator():
         self.n_components = n_components
         # When True (False by default) the components_ vectors are divided by the singular values to ensure uncorrelated outputs with unit component-wise variances.
         self.whiten = False
-        self.transformer = RandomizedPCA(n_components, whiten=self.whiten)
+        self.transformer = PCA(n_components, whiten=self.whiten, svd_solver='randomized')
         self.batch_support = False
 
     def get_param_str(self):
