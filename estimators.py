@@ -14,7 +14,6 @@ import numpy as np
 import itertools
 from types import SimpleNamespace
 from sklearn.decomposition import TruncatedSVD
-from sklearn.manifold import Isomap
 
 # ICA
 class ICAEstimator():
