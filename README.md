@@ -2,18 +2,49 @@
 ![Python 3.7](https://img.shields.io/badge/python-3.7-green.svg)
 ![PyTorch 1.3](https://img.shields.io/badge/pytorch-1.3-green.svg)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/harskish/ganspace/blob/master/notebooks/Ganspace_colab.ipynb)
-![teaser](teaser.jpg)
-<p align="justify"><b>Figure 1:</b> Sequences of image edits performed using control discovered with our method, applied to three different GANs. The white insets specify the particular edits using notation explained in Section 3.4 ('Layer-wise Edits').</p>
 
 
 > **GANSpace: Discovering Interpretable GAN Controls**<br>
-> Erik Härkönen<sup>1,2</sup>, Aaron Hertzmann<sup>2</sup>, Jaakko Lehtinen<sup>1,3</sup>, Sylvain Paris<sup>2</sup><br>
-> <sup>1</sup>Aalto University, <sup>2</sup>Adobe Research, <sup>3</sup>NVIDIA<br>
-> https://arxiv.org/abs/2004.02546
->
-> <p align="justify"><b>Abstract:</b> <i>This paper describes a simple technique to analyze Generative Adversarial Networks (GANs) and create interpretable controls for image synthesis, such as change of viewpoint, aging, lighting, and time of day. We identify important latent directions based on Principal Components Analysis (PCA) applied in activation space. Then, we show that interpretable edits can be defined based on layer-wise application of these edit directions. Moreover, we show that BigGAN can be controlled with layer-wise inputs in a StyleGAN-like manner. A user may identify a large number of interpretable controls with these mechanisms. We demonstrate results on GANs from various datasets.</i></p>
-> <p align="justify"><b>Video:</b> 
-> https://youtu.be/jdTICDa_eAI
+Git workflow:
+Open your git bash terminal. Other steps should be followed for other interfaces.
+1. Be sure that you are in the right folder, else navigate there
+```
+$ cd my_folder
+```
+2. Create a new branch per new task and switch to this branch
+```
+$ git checkout -b my_branch
+```
+3. Get remote changes locally in your branch:
+```
+$ git pull origin my_branch
+```
+4. Make local changes to your code
+5. Check your changes. You will get a list with all changes made in scripts files etc. You can do 'git status' in later steps as well. 
+```
+$ git status
+```
+6. Add your files. This can be done in 2 ways:
+a. Add all files one by one manually. This helps selecting what you are going to send to remote and what not:
+```
+$ git add my_file
+```
+b. If and only if you are sure that all changes made locally should be pushed to the remote, add ALL files by typing:
+```
+$ git add .
+```
+7. Commit changes followed by a representative message regarding the reason for commiting (summarize in one sentence what you did)
+```
+$ git commit -m"changes made according to issue 1234"
+```
+8. Push to remote
+```
+$ git push origin my_branch
+```
+9. Go to github. You will see a 'compare and pull request' button. Click it. You are going to finally merge the changes you just pushed to the existing code. ONLY PROCEED IF YOU ARE SURE YOUR CHANGES ARE WORKING. Write a relevant comment in the corresponding comment box.
+10. Create a pull request by clicking the button 'Create pull request'.
+11. You need to see a message "This branch has no conflicts with the base branch", else good luck. Then, just click 'Merge pull request.
+12. Click 'Confirm merge'. You are done! All local changes you added (git add) are passed from your local branch (my_branch) to the remote main branch (main). ALWAYS KEEP MAIN CLEAN AND FUNCTIONAL! Consider main as the branch you are going to handle to your client or your boss.
 
 ## Setup
 See the [setup instructions](SETUP.md).
