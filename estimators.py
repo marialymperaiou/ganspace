@@ -294,3 +294,12 @@ def get_estimator(name, n_components, alpha):
         return SPCAEstimator(n_components, alpha)
     else:
         raise RuntimeError('Unknown estimator')
+
+
+"""
+TEST COMMENTARY ADDED:
+What is "facebook PCA"?
+Should we try non-PCA based-methods? Non Linear ones? Would they be as interpretable?
+What else to play with besides the dimension reduction technique? More fundamental?
+What other models to add?
+"""
