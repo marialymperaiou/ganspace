@@ -14,4 +14,4 @@ import sys
 #module_path = Path(__file__).parent / 'pytorch_biggan'
 #sys.path.append(str(module_path.resolve()))
 
-from .model import Generator
+from .model import Generator, MappingNetwork
