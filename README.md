@@ -54,6 +54,7 @@ See the [setup instructions](SETUP.md).
 This repository includes versions of BigGAN, StyleGAN, and StyleGAN2 modified to support per-layer latent vectors.
 
 **For ARIS**
+
 Check folder named out for results.
 Other ideas:
 --est can be one of: pca, svd, rpca, ipca, fbpca, ica, spca. scd and rpca is our contributions, we can run most trials with them. It's good to have all of the estimators at some point though.
