@@ -67,7 +67,7 @@ Other ideas:
 
 
 StyleGAN:
-
+```
 python visualize.py --model=StyleGAN  --est=pca --class=wikiart  --use_w --layer=g_mapping 
 
 (a bit of shitty images, but maybe we can showcase failure cases, explain their causes and address future work):
@@ -75,9 +75,9 @@ python visualize.py --model=StyleGAN  --est=rpca --class=cats  --use_w --layer=g
 
 The following cannot allocate enough memory on Colab, maybe ARIS can handle it (in general g_synthesis needs too much memort for reaqsons I don't know):
 python visualize.py --model=StyleGAN  --est=svd --class=cars  --use_w --layer=g_synthesis 
-
+```
 StyleGAN2-ADA (our contribution, has pre-trained only for ffhq, so we only run ffhq):
-
+```
 python visualize.py --model=StyleGAN_ADA  --est=svd --class=ffhq  --use_w --layer=style 
 
 python visualize.py --model=StyleGAN_ADA  --est=svd --class=ffhq  --use_w --layer=conv1.conv.modulation
@@ -94,8 +94,9 @@ python visualize.py --model=StyleGAN_ADA  --est=svd --class=ffhq  --use_w --laye
 Compare earlier and later layers (they crash at Colab due to memory):
 python visualize.py --model=StyleGAN_ADA  --est=rpca --class=ffhq  --use_w --layer=convs.0.noise
 python visualize.py --model=StyleGAN_ADA  --est=rpca --class=ffhq  --use_w --layer=convs.14.noise
-
+```
 StyleGAN2:
+```
 Those have strange problems, you can try, but if they are present skip them:
 python visualize.py --model=StyleGAN2 --est=rpca --class=horse --use_w --layer=style.0
 python visualize.py --model=StyleGAN2 --est=rpca --class=horse --use_w --layer=style.8
@@ -106,6 +107,7 @@ python visualize.py --model=StyleGAN2 --est=rpca --class=church --use_w --layer=
 
 (memory issues):
 python visualize.py --model=StyleGAN2 --est=spca --class=places --use_w --layer=style 
+```
 
 **Interactive model exploration**
 ```
