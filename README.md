@@ -53,6 +53,8 @@ See the [setup instructions](SETUP.md).
 ## Usage
 This repository includes versions of BigGAN, StyleGAN, and StyleGAN2 modified to support per-layer latent vectors.
 
+# Experiments
+
 **For ARIS**
 
 Check folder named out for results.
@@ -107,6 +109,22 @@ python visualize.py --model=StyleGAN2 --est=rpca --class=church --use_w --layer=
 
 (memory issues):
 python visualize.py --model=StyleGAN2 --est=spca --class=places --use_w --layer=style 
+```
+
+BigGAN
+As the name suggests, it is too BIG for Colab to handle. RAM issues occured in all settings. Reduce -n hyperparameter to have a chance of getting some output. You can risk running higher resolutions (256 and 512 instead of 128). Play around with ImageNet classes https://gist.github.com/yrevar/942d3a0ac09ec9e5eb3a.
+```
+Try (rpca implied here):
+python visualize.py --model=BigGAN-128 --class=tiger --layer=generator.gen_z -n=1_000
+
+This doesn't crash in Colab:
+python visualize.py --model=BigGAN-128 --est=svd --class=zebra --layer=generator.gen_z -n=500
+
+The following works, but I don't know on which layer:
+python visualize.py --model=BigGAN-128 --est=rpca --class=cat --layer= -n=500
+
+Let's see what a green mamba is
+python visualize.py --model=BigGAN-128 --est=svd --class=green_mamba --layer=generator.gen_z -n=500
 ```
 
 **Interactive model exploration**
