@@ -95,21 +95,27 @@ class BaseModel(AbstractBaseClass, torch.nn.Module):
         return self.model.named_modules(*args, **kwargs)
     
 class StyleGAN_ADA(BaseModel):
+    # PyTorch port of StyleGAN 2 ADA
+    # this architecture uses an alternative discriminator to tackle issues relevant to data augumentation
+    # the Generator part builds on StyleGAN 2 architecture
     def __init__(self, device, class_name, truncation=1.0, use_w=False):
         super(StyleGAN_ADA, self).__init__('StyleGAN_ADA', class_name or 'ffhq')
         self.device = device
         self.truncation = truncation
         self.latent_avg = None
         self.w_primary = use_w # use W as primary latent space?
+        self.z_dim = 512
+        self.c_dim = 512
+        self.w_dim = 512
 
         # Image widths
         configs = {
-            # Converted NVIDIA official
-            'ffhq': 1024
+            # only ffhq available
+            'ffhq': 1024,
         }
-        
+
         assert self.outclass in configs, \
-        f'Invalid StyleGAN_ADA class {self.outclass}, should be one of [{", ".join(configs.keys())}]'
+            f'Invalid StyleGAN_ADA class {self.outclass}, should be one of [{", ".join(configs.keys())}]'
 
         self.resolution = configs[self.outclass]
         self.name = f'StyleGAN_ADA-{self.outclass}'
@@ -129,7 +135,7 @@ class StyleGAN_ADA(BaseModel):
     # URLs created with https://sites.google.com/site/gdocs2direct/
     def download_checkpoint(self, outfile):
         checkpoints = {
-            'ffhq': 'https://drive.google.com/uc?export=download&id=1FJRwzAkV-XWbxgTwxEmEACvuqF5DsBiV'
+            'ffhq': 'https://drive.google.com/uc?export=download&id=1FJRwzAkV-XWbxgTwxEmEACvuqF5DsBiV',
         }
 
         url = checkpoints[self.outclass]
@@ -137,9 +143,9 @@ class StyleGAN_ADA(BaseModel):
 
     def load_model(self):
         checkpoint_root = os.environ.get('GANCONTROL_CHECKPOINT_DIR', Path(__file__).parent / 'checkpoints')
-        checkpoint = Path(checkpoint_root) / f'stylegan_ADA/stylegan_ADA_{self.outclass}_{self.resolution}.pt'
+        checkpoint = Path(checkpoint_root) / f'stylegan_ADA/stylegan_ADA{self.outclass}_{self.resolution}.pt'
         
-        self.model = stylegan_ADA.Generator(self.resolution, 512, 8).to(self.device)
+        self.model = stylegan2.Generator(self.resolution, 512, 8).to(self.device)
 
         if not checkpoint.is_file():
             os.makedirs(checkpoint.parent, exist_ok=True)
@@ -168,7 +174,7 @@ class StyleGAN_ADA(BaseModel):
 
     def set_output_class(self, new_class):
         if self.outclass != new_class:
-            raise RuntimeError('StyleGAN_ADA: cannot change output class without reloading')
+            raise RuntimeError('StyleGAN2: cannot change output class without reloading')
     
     def forward(self, x):
         x = x if isinstance(x, list) else [x]
