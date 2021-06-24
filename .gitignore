@@ -5,3 +5,4 @@ cache/
 out/
 checkpoints/
 **/.ipynb_checkpoints/
+requirements.txt
