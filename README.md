@@ -1,7 +1,8 @@
 # GANSpace: Discovering Interpretable GAN Controls
 ![Python 3.7](https://img.shields.io/badge/python-3.7-green.svg)
 ![PyTorch 1.3](https://img.shields.io/badge/pytorch-1.3-green.svg)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-pO_XP9YhI4XIHQ6kUh-xMGoPJSAhjn5?usp=sharing)
+[![Open In Colab ganspace](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-pO_XP9YhI4XIHQ6kUh-xMGoPJSAhjn5?usp=sharing)
+[![Open In Colab experiments](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qTyTMgeSQLpqyVSkws1fCtVlkL1vFZDj?usp=sharing)
 
 If Colab notebook doesn't work, copy this link: https://colab.research.google.com/drive/1-pO_XP9YhI4XIHQ6kUh-xMGoPJSAhjn5?usp=sharing
 
