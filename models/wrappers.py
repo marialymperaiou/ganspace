@@ -894,7 +894,6 @@ def get_instrumented_model(name, output_class, layers, device, **kwargs):
         model.use_w()
 
     return inst
-
 # Version 2: Config object
 @get_instrumented_model.register(Config)
 def _(cfg, device, **kwargs):
