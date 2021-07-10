@@ -6,47 +6,9 @@
 
 If Colab notebook doesn't work, copy this link: https://colab.research.google.com/drive/1-pO_XP9YhI4XIHQ6kUh-xMGoPJSAhjn5?usp=sharing
 
+Exploring latent space direction for image synthesis networks has been a rather hard and heavilysupervised-focused task, though essential in order to perform interesting local and global edits in thelow-dimensional latent space, which translate in meaningful manipulations in the image space. Sincethe proposal of using dimensionality reduction techniques to discover interpretable latent direction,the focus has shifted towards exploring the capabilities and the alternatives of this approach. In thiswork, we are using the latent space dimensionality reduction setting to apply dimensionality reductiontechniques not explored in previous literature.  Additionally, we apply the various dimensionalityreduction techniques on a state-of-the-art image synthesis model, named StyleGAN2-ADA, which iscapable of generating high-resolution images while trained on limited input data. The discovery ofinterpretable directions on this novel architecture can reveal useful insights regarding controllableimage manipulations, inspiring future works on custom-made datasets with fewer training examples.The overall setting does not require any kind of re-training, which eliminates the computationalresources needed and enables the usage of this technique on behalf of any institution or individual.
+
 > **GANSpace: Discovering Interpretable GAN Controls**<br>
-Git workflow:
-Open your git bash terminal. Other steps should be followed for other interfaces.
-1. Be sure that you are in the right folder, else navigate there
-```
-$ cd my_folder
-```
-2. Create a new branch per new task and switch to this branch
-```
-$ git checkout -b my_branch
-```
-3. Get remote changes locally in your branch:
-```
-$ git pull origin my_branch
-```
-4. Make local changes to your code
-5. Check your changes. You will get a list with all changes made in scripts files etc. You can do 'git status' in later steps as well. 
-```
-$ git status
-```
-6. Add your files. This can be done in 2 ways:
-a. Add all files one by one manually. This helps selecting what you are going to send to remote and what not:
-```
-$ git add my_file
-```
-b. If and only if you are sure that all changes made locally should be pushed to the remote, add ALL files by typing:
-```
-$ git add .
-```
-7. Commit changes followed by a representative message regarding the reason for commiting (summarize in one sentence what you did)
-```
-$ git commit -m"changes made according to issue 1234"
-```
-8. Push to remote
-```
-$ git push origin my_branch
-```
-9. Go to github. You will see a 'compare and pull request' button. Click it. You are going to finally merge the changes you just pushed to the existing code. ONLY PROCEED IF YOU ARE SURE YOUR CHANGES ARE WORKING. Write a relevant comment in the corresponding comment box.
-10. Create a pull request by clicking the button 'Create pull request'.
-11. You need to see a message "This branch has no conflicts with the base branch", else good luck. Then, just click 'Merge pull request.
-12. Click 'Confirm merge'. You are done! All local changes you added (git add) are passed from your local branch (my_branch) to the remote main branch (main). ALWAYS KEEP MAIN CLEAN AND FUNCTIONAL! Consider main as the branch you are going to handle to your client or your boss.
 
 ## Setup
 See the [setup instructions](SETUP.md).
@@ -55,78 +17,6 @@ See the [setup instructions](SETUP.md).
 This repository includes versions of BigGAN, StyleGAN, and StyleGAN2 modified to support per-layer latent vectors.
 
 # Experiments
-
-**For ARIS**
-
-Check folder named out for results.
-Other ideas:
---est can be one of: pca, svd, rpca, ipca, fbpca, ica, spca. scd and rpca is our contributions, we can run most trials with them. It's good to have all of the estimators at some point though.
-
---layer is different per model. Use an invalid value to get a list of layers. We can choose earlier layers as well as later ones (such as --layer=convs.0.noise and --layer=convs.14.noise of stylegan2ADA to compare what happens, if we use the same class).
-
---use_w goes only for StyleGAN/StyleGAN2/StyleGAN-ADA.
-
---class is different for different models, check overleaf to see what dataset goes with each model. Try as many of the models as possible, maybe its better to present different datasets in the paper to showcase the abilities of the approach. If you insert invalid class, a list of valid options is returned.
-
-
-StyleGAN:
-```
-python visualize.py --model=StyleGAN  --est=pca --class=wikiart  --use_w --layer=g_mapping 
-
-(a bit of shitty images, but maybe we can showcase failure cases, explain their causes and address future work):
-python visualize.py --model=StyleGAN  --est=rpca --class=cats  --use_w --layer=g_mapping 
-
-The following cannot allocate enough memory on Colab, maybe ARIS can handle it (in general g_synthesis needs too much memort for reaqsons I don't know):
-python visualize.py --model=StyleGAN  --est=svd --class=cars  --use_w --layer=g_synthesis 
-```
-StyleGAN2-ADA (our contribution, has pre-trained only for ffhq, so we only run ffhq):
-```
-python visualize.py --model=StyleGAN_ADA  --est=svd --class=ffhq  --use_w --layer=style 
-
-python visualize.py --model=StyleGAN_ADA  --est=svd --class=ffhq  --use_w --layer=conv1.conv.modulation
-
-The following crashes at colab, may work on ARIS:
-python visualize.py --model=StyleGAN_ADA  --est=rpca --class=ffhq  --use_w --layer=input
-
-Same memory error here:
-python visualize.py --model=StyleGAN_ADA  --est=rpca --class=ffhq  --use_w --layer=conv1
-
-Still memory error (it crashed my Colab again):
-python visualize.py --model=StyleGAN_ADA  --est=svd --class=ffhq  --use_w --layer=conv1
-
-Compare earlier and later layers (they crash at Colab due to memory):
-python visualize.py --model=StyleGAN_ADA  --est=rpca --class=ffhq  --use_w --layer=convs.0.noise
-python visualize.py --model=StyleGAN_ADA  --est=rpca --class=ffhq  --use_w --layer=convs.14.noise
-```
-StyleGAN2:
-```
-Those have strange problems, you can try, but if they are present skip them:
-python visualize.py --model=StyleGAN2 --est=rpca --class=horse --use_w --layer=style.0
-python visualize.py --model=StyleGAN2 --est=rpca --class=horse --use_w --layer=style.8
-
-python visualize.py --model=StyleGAN2 --est=svd --class=horse --use_w --layer=style 
-
-python visualize.py --model=StyleGAN2 --est=rpca --class=church --use_w --layer=style
-
-(memory issues):
-python visualize.py --model=StyleGAN2 --est=spca --class=places --use_w --layer=style 
-```
-
-BigGAN
-As the name suggests, it is too BIG for Colab to handle. RAM issues occured in all settings. Reduce -n hyperparameter to have a chance of getting some output. You can risk running higher resolutions (256 and 512 instead of 128). Play around with ImageNet classes https://gist.github.com/yrevar/942d3a0ac09ec9e5eb3a.
-```
-Try (rpca implied here):
-python visualize.py --model=BigGAN-128 --class=tiger --layer=generator.gen_z -n=1_000
-
-This doesn't crash in Colab:
-python visualize.py --model=BigGAN-128 --est=svd --class=zebra --layer=generator.gen_z -n=500
-
-The following works, but I don't know on which layer:
-python visualize.py --model=BigGAN-128 --est=rpca --class=cat --layer= -n=500
-
-Let's see what a green mamba is
-python visualize.py --model=BigGAN-128 --est=svd --class=green_mamba --layer=generator.gen_z -n=500
-```
 
 **Interactive model exploration**
 ```
@@ -226,5 +116,6 @@ The directories `models/biggan` and `models/stylegan2` are provided under the MI
 [biggan_pytorch]: https://github.com/huggingface/pytorch-pretrained-BigGAN
 [stylegan_pytorch]: https://github.com/lernapparat/lernapparat/blob/master/style_gan/pytorch_style_gan.ipynb
 [stylegan2_pytorch]: https://github.com/rosinality/stylegan2-pytorch
+[stylegan2_ADA_pytorch]: https://github.com/NVlabs/stylegan2-ada
 [gandissect]: https://github.com/CSAILVision/GANDissect
 [pretrained_stylegan]: https://github.com/justinpinkney/awesome-pretrained-stylegan
