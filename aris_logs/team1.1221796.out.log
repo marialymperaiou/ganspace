@@ -1,0 +1,4 @@
+StyleGAN2: Optimized CUDA op FusedLeakyReLU not available, using native PyTorch fallback.
+StyleGAN2: Optimized CUDA op UpFirDn2d not available, using native PyTorch fallback.
+[06.07 14:22] StyleGAN2, conv1, pca
+Downloading https://drive.google.com/uc?export=download&id=1FJRwzAkV-XWbxgTwxEmEACvuqF5DsBiV

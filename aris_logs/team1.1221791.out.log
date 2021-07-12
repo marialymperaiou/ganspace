@@ -1,0 +1,2 @@
+StyleGAN2: Optimized CUDA op FusedLeakyReLU not available, using native PyTorch fallback.
+StyleGAN2: Optimized CUDA op UpFirDn2d not available, using native PyTorch fallback.

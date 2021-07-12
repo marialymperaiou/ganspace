@@ -1,0 +1,71 @@
+/users/pa19/gealexdl/team1/venv/lib/python3.8/site-packages/setuptools/distutils_patch.py:25: UserWarning: Distutils was imported before Setuptools. This usage is discouraged and may exhibit undesirable behaviors or errors. Please use Setuptools' objects directly or at least import Setuptools first.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/site-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/site-packages/urllib3/util/connection.py", line 96, in create_connection
+    raise err
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+OSError: [Errno 113] No route to host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/site-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/site-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/site-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f205f558190>: Failed to establish a new connection: [Errno 113] No route to host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/site-packages/urllib3/util/retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?export=download&id=1FJRwzAkV-XWbxgTwxEmEACvuqF5DsBiV (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f205f558190>: Failed to establish a new connection: [Errno 113] No route to host'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/pa19/gealexdl/team1/ganspace/visualize.py", line 152, in <module>
+    inst = get_instrumented_model(args.model, args.output_class, layer_key, device, use_w=args.use_w)
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/functools.py", line 875, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/users/pa19/gealexdl/team1/ganspace/models/wrappers.py", line 862, in get_instrumented_model
+    model = get_model(name, output_class, device, **kwargs)
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/functools.py", line 875, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/users/pa19/gealexdl/team1/ganspace/models/wrappers.py", line 845, in get_model
+    model = StyleGAN2(device, class_name=output_class)
+  File "/users/pa19/gealexdl/team1/ganspace/models/wrappers.py", line 290, in __init__
+    self.load_model()
+  File "/users/pa19/gealexdl/team1/ganspace/models/wrappers.py", line 326, in load_model
+    self.download_checkpoint(checkpoint)
+  File "/users/pa19/gealexdl/team1/ganspace/models/wrappers.py", line 316, in download_checkpoint
+    download_ckpt(url, outfile)
+  File "/users/pa19/gealexdl/team1/ganspace/utils.py", line 86, in download_ckpt
+    download_google_drive(url, output_name)
+  File "/users/pa19/gealexdl/team1/ganspace/utils.py", line 47, in download_google_drive
+    r = session.get(url, allow_redirects=True)
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/site-packages/requests/sessions.py", line 555, in get
+    return self.request('GET', url, **kwargs)
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/apps/applications/pytorch/1.8.0/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='drive.google.com', port=443): Max retries exceeded with url: /uc?export=download&id=1FJRwzAkV-XWbxgTwxEmEACvuqF5DsBiV (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f205f558190>: Failed to establish a new connection: [Errno 113] No route to host'))
+srun: error: gpu02: task 0: Exited with exit code 1
+srun: Terminating job step 1221796.0
