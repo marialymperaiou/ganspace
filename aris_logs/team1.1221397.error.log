@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/users/pa19/gealexdl/team1/ganspace/models/stylegan_ADA/torch_utils/misc.py", line 62, in <module>
+    symbolic_assert = torch._assert # 1.8.0a0 # pylint: disable=protected-access
+AttributeError: module 'torch' has no attribute '_assert'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/pa19/gealexdl/team1/ganspace/visualize.py", line 25, in <module>
+    from models import get_instrumented_model
+  File "/users/pa19/gealexdl/team1/ganspace/models/__init__.py", line 11, in <module>
+    from .wrappers import *
+  File "/users/pa19/gealexdl/team1/ganspace/models/wrappers.py", line 24, in <module>
+    from . import stylegan_ADA
+  File "/users/pa19/gealexdl/team1/ganspace/models/stylegan_ADA/__init__.py", line 17, in <module>
+    from .model import Generator, MappingNetwork
+  File "/users/pa19/gealexdl/team1/ganspace/models/stylegan_ADA/model.py", line 11, in <module>
+    from .torch_utils import misc
+  File "/users/pa19/gealexdl/team1/ganspace/models/stylegan_ADA/torch_utils/misc.py", line 64, in <module>
+    symbolic_assert = torch.Assert # 1.7.0
+AttributeError: module 'torch' has no attribute 'Assert'
+srun: error: gpu13: task 0: Exited with exit code 1
+srun: Terminating job step 1221397.0
