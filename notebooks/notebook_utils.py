@@ -50,7 +50,9 @@ def _create_strip_impl(inst, mode, layer, latents, x_comp, z_comp, act_stdev, la
 def _create_strip_batch_sigma(inst, mode, layer, latents, x_comp, z_comp, act_stdev, lat_stdev, act_mean, lat_mean, sigma, layer_start, layer_end, num_frames, center):    
     inst.close()
     batch_frames = [[] for _ in range(len(latents))]
-    
+    #i can create LESS IMAGES but visually looks terrible, which may not actually be a problem when we slice images one after another
+    #the real problem seems to be that it does not support by construction more than 5 generated images which probably indicates 
+    #that significant revamping is in order if possible at all
     B = min(num_frames, 5)
     lep_padded = ((num_frames - 1) // B + 1) * B
     sigma_range = np.linspace(-sigma, sigma, num_frames)
