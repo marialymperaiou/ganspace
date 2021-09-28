@@ -75,12 +75,21 @@ def make_mp4(imgs, duration_secs, outname):
             print(ret[1].decode("utf-8"))
             raise sp.CalledProcessError(p.returncode, command)
 
+'''
+CHANGES REQUIRED TO INCREASE N_OUTPUTS:
+ n_rows in make_grid SHOULD INCREASE AND EQUAL  
+  num_frames IN notebook_utils.py IN _create_strip_batch_sigma 
+  AND maybe _create_strip_batch_lat (since both could be used)
+'''
 
 def make_grid(latent, lat_mean, lat_comp, lat_stdev, act_mean, act_comp, act_stdev, scale=1, n_rows=10, n_cols=5, make_plots=True, edit_type='latent'):
     from notebooks.notebook_utils import create_strip_centered
 
     inst.remove_edits()
     x_range = np.linspace(-scale, scale, n_cols, dtype=np.float32) # scale in sigmas
+    
+    #debugging statement, used to print out sigma labels 
+    print(f"x_range: {x_range}")
 
     rows = []
     for r in range(n_rows):

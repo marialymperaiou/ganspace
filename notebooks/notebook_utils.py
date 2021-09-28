@@ -57,6 +57,13 @@ def _create_strip_batch_sigma(inst, mode, layer, latents, x_comp, z_comp, act_st
     #that significant revamping is in order if possible at all
    
     #changeing beta min( , 8) did not crash it; NO IMPACT either
+    
+    '''
+    CHANGE REQUIRED TO INTRODUCE MORE FRAMES PER ROW
+    num_frames = 6 #change to 6 for example, verified to work in the testbed. THIS SHOULD EQUAL n_cols in make_grid in visualize.py
+    '''
+    
+    
     B = min(num_frames, 5)
     lep_padded = ((num_frames - 1) // B + 1) * B
     sigma_range = np.linspace(-sigma, sigma, num_frames)
