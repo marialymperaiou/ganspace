@@ -77,8 +77,10 @@ def make_mp4(imgs, duration_secs, outname):
 
 '''
 CHANGES REQUIRED TO INCREASE N_OUTPUTS:
- n_rows in make_grid SHOULD INCREASE AND EQUAL  
-  num_frames IN notebook_utils.py IN _create_strip_batch_sigma 
+1. n_rows in make_grid SHOULD INCREASE AND EQUAL  
+2.  num_frames IN notebook_utils.py IN _create_strip_batch_sigma
+3.  AND  B = min(num_frames, 5) (CHANGE 5 to Whatever argument desired, not sure if necessary but better be safe with that)
+
   AND maybe _create_strip_batch_lat (since both could be used)
 '''
 
