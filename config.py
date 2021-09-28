@@ -67,6 +67,10 @@ class Config:
         parser.add_argument('--sigma', type=float, default=2.0, help='Number of stdevs to walk in visualize.py')
         parser.add_argument('--inputs', type=str, default=None, help='Path to directory with named components')
         parser.add_argument('--seed', type=int, default=None, help='Seed used in decomposition')
+        
+        #custom addition, controls how many frames to get per row - maximum extend is untested as of 28/9, 4.34 but soon will be'
+        parser.add_argument('--frames', type=int, default=5, help="Number of frames per row (pc)")
+        
         args = parser.parse_args(args)
 
         return self.from_dict(args.__dict__)

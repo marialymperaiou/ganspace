@@ -77,7 +77,7 @@ def make_mp4(imgs, duration_secs, outname):
 
 '''
 CHANGES REQUIRED TO INCREASE N_OUTPUTS:
-1. n_rows in make_grid SHOULD INCREASE AND EQUAL  
+1. n_cols in make_grid SHOULD INCREASE AND EQUAL  
 2.  num_frames IN notebook_utils.py IN _create_strip_batch_sigma
 3.  AND  B = min(num_frames, 5) (CHANGE 5 to Whatever argument desired, not sure if necessary but better be safe with that)
 
@@ -139,6 +139,8 @@ if __name__ == '__main__':
     global max_batch, sample_shape, feature_shape, inst, args, layer_key, model
 
     args = Config().from_args()
+    
+    print(f"Number of frames selected: {args.frames}")
     t_start = datetime.datetime.now()
     timestamp = lambda : datetime.datetime.now().strftime("%d.%m %H:%M")
     print(f'[{timestamp()}] {args.model}, {args.layer}, {args.estimator}')
