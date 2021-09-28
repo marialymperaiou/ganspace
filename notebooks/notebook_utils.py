@@ -20,6 +20,8 @@ from utils import prettify_name, pad_frames
 
 # Apply edit to given latents, return strip of images
 def create_strip(inst, mode, layer, latents, x_comp, z_comp, act_stdev, lat_stdev, sigma, layer_start, layer_end, num_frames=5):
+    #CHANGING num_Frames here and below didn't actualyl cause my colab to crash as was extected BUT it didn't have any impact either. 
+    #WHICH IS FUCKING OBVIOUS SINCE IN LINE 58 it still gets trolled down to 5, Mother fucker
     return _create_strip_impl(inst, mode, layer, latents, x_comp, z_comp, act_stdev,
                 lat_stdev, None, None, sigma, layer_start, layer_end, num_frames, center=False)
 
@@ -53,6 +55,8 @@ def _create_strip_batch_sigma(inst, mode, layer, latents, x_comp, z_comp, act_st
     #i can create LESS IMAGES but visually looks terrible, which may not actually be a problem when we slice images one after another
     #the real problem seems to be that it does not support by construction more than 5 generated images which probably indicates 
     #that significant revamping is in order if possible at all
+   
+    #changeing beta min( , 8) did not crash it; NO IMPACT either
     B = min(num_frames, 5)
     lep_padded = ((num_frames - 1) // B + 1) * B
     sigma_range = np.linspace(-sigma, sigma, num_frames)
