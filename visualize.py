@@ -33,6 +33,41 @@ from config import Config
 from decomposition import get_random_dirs, get_or_compute, get_max_batch_size, SEED_VISUALIZATION
 from utils import pad_frames 
 
+
+'''
+FUNCTION  to save frames per compnent. see if it retains multiple rows per folder - need 
+    #to then also modify the names per ci saved
+probably will use filename f'samp{img_idx}_real_{get_edit_name(edit_mode)}'
+
+num_frames should be user choice via args.frames
+
+COULD ALSO create a large "out components folder" too
+'''
+
+#works 
+def save_frames(image, num_frames, unique_id):
+    i = 0
+    for img_ind in range(image.shape[0] // num_frames):
+        if not os.path.exists(f"component_{i}"):
+            os.mkdir(f"component_{i}")
+        ci_load = image[num_frames*i: num_frames*i + num_frames, 1]
+        np.save(os.path.join(f'component_{i}', f'{unique_id}: c_{i}'), ci_load) 
+
+        i +=1 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def x_closest(p):
     distances = np.sqrt(np.sum((X - p)**2, axis=-1))
     idx = np.argmin(distances)
@@ -264,8 +299,8 @@ if __name__ == '__main__':
             tensors.X_comp, tensors.X_stdev, scale=args.sigma, edit_type=edit_mode, n_rows=14)
         plt.savefig(outdir_summ / f'components_{get_edit_name(edit_mode)}.jpg', dpi=300)
         show()
-        '''
         
+        '''
         #MODIFIED
         make_grid(tensors.Z_global_mean, tensors.Z_global_mean, tensors.Z_comp, tensors.Z_stdev, tensors.X_global_mean,
             tensors.X_comp, tensors.X_stdev, scale=args.sigma, edit_type=edit_mode, n_rows=14, n_cols=args.frames)
@@ -298,7 +333,7 @@ if __name__ == '__main__':
         plt.figure(figsize = (14,12))
         plt.suptitle(f"{model.name} - {layer_name}, random directions w/ PC stdevs, {get_edit_name(edit_mode)} edit", size=16)
         
-        #ADDING n_cols=args.frames here as well
+        #MODIFIED: ADDING n_cols=args.frames here as well
         make_grid(tensors.Z_global_mean, tensors.Z_global_mean, random_dirs_z, tensors.Z_stdev,
             tensors.X_global_mean, random_dirs_act, tensors.X_stdev, scale=args.sigma, edit_type=edit_mode, n_rows=14, n_cols=args.frames)
         plt.savefig(outdir_summ / f'random_dirs_{get_edit_name(edit_mode)}.jpg', dpi=300)
@@ -326,9 +361,13 @@ if __name__ == '__main__':
             show()
             '''
             
-            #MODIFIED
-            np.save(f'samp{img_idx}_real_{get_edit_name(edit_mode)}.jpg', make_grid(z, tensors.Z_global_mean, tensors.Z_comp, tensors.Z_stdev,
-                tensors.X_global_mean, tensors.X_comp, tensors.X_stdev, scale=args.sigma, edit_type=edit_mode, n_rows=14, n_cols=args.frames))
+            #MODIFIED  - REMOVE .jpg from filename and added proper saving
+            image_produced =  make_grid(z, tensors.Z_global_mean, tensors.Z_comp, tensors.Z_stdev,
+                tensors.X_global_mean, tensors.X_comp, tensors.X_stdev, scale=args.sigma, edit_type=edit_mode, n_rows=14, n_cols=args.frames)
+            
+            #second parameter (5) should be args.frames, and changed from all ther
+            #make_grids plots
+            save_frames(np.array(image_produced), args.frames, f'samp{img_idx}_real_{get_edit_name(edit_mode)}')
             plt.savefig(outdir_summ / f'samp{img_idx}_real_{get_edit_name(edit_mode)}.jpg', dpi=300)
             show()
             

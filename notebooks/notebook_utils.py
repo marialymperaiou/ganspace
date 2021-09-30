@@ -62,11 +62,11 @@ def _create_strip_batch_sigma(inst, mode, layer, latents, x_comp, z_comp, act_st
     CHANGE REQUIRED TO INTRODUCE MORE FRAMES PER ROW
    1. num_frames = 6 #change to 6 for example, verified to work in the testbed. THIS SHOULD EQUAL n_cols in make_grid in visualize.py
     
-   2.  B = min(num_frames, desired_min_number)
+   2.  B = min(num_frames, desired_min_number) => subject to testing AND should actually be hyperparam? 
     '''
     
-    
-    B = min(num_frames, 5)
+
+    B = min(num_frames, num_frames)
     lep_padded = ((num_frames - 1) // B + 1) * B
     sigma_range = np.linspace(-sigma, sigma, num_frames)
     sigma_range = np.concatenate([sigma_range, np.zeros((lep_padded - num_frames))])
