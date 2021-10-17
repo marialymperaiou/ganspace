@@ -55,19 +55,6 @@ def save_frames(image, num_frames, unique_id):
 
         i +=1 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 def x_closest(p):
     distances = np.sqrt(np.sum((X - p)**2, axis=-1))
     idx = np.argmin(distances)
@@ -126,7 +113,7 @@ def make_grid(latent, lat_mean, lat_comp, lat_stdev, act_mean, act_comp, act_std
     x_range = np.linspace(-scale, scale, n_cols, dtype=np.float32) # scale in sigmas
     
     #debugging statement, used to print out sigma labels 
-    print(f"x_range: {x_range}")
+    #print(f"x_range: {x_range}")
 
     rows = []
     for r in range(n_rows):
