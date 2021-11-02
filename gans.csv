@@ -1,0 +1,289 @@
+,Dataset,Edit,Estimator,Latent_space,Layer,Model,Principal_component,Sigma
+0,ffhq,"Smile, Hair Quantity",IPCA,W,convs.1.activate,StyleGAN_ADA,C13,3
+1,ffhq,"Beard Quantity, glasses",IPCA,W,convs.1.activate,StyleGAN_ADA,C12,3
+2,ffhq,"Age, sex",IPCA,W,convs.1.activate,StyleGAN_ADA,C12,3
+3,ffhq,"Race, Glasses, Hair Color, Hair Style",IPCA,W,convs.1.activate,StyleGAN_ADA,C9,3
+4,ffhq,"Hair Quantity, Rotation, Slight Beard",IPCA,W,convs.1.activate,StyleGAN_ADA,C4,3
+5,ffhq,"Age, Hair Style",IPCA,W,convs.1.activate,StyleGAN_ADA,C5,3
+6,ffhq,"Smile, Hair Quantity, Background",IPCA,W,convs.1.activate,StyleGAN_ADA,C13,3
+7,ffhq,"Age, Hair Quantity",IPCA,W,convs.1.activate,StyleGAN_ADA,C7,3
+8,ffhq,Sex,IPCA,W,convs.1.activate,StyleGAN_ADA,C0,3
+9,ffhq,"Age, Sex, Slight Rotation, Hat Addition",IPCA,W,convs.1.activate,StyleGAN_ADA,C0,3
+10,ffhq,"Sex, Hair Quantity, Smile",PCA,W,to_rgs.0.upsample,StyleGAN_ADA,C6,3
+11,ffhq,"Background, Age, Slight Rotation",PCA,W,to_rgs.0.upsample,StyleGAN_ADA,C12,3
+12,ffhq,"Hat Addition, Age, Slight Rotation",PCA,W,to_rgs.0.upsample,StyleGAN_ADA,C9,3
+13,ffhq,"Sex, Hair Color, Hair Quantity",PCA,W,to_rgs.0.upsample,StyleGAN_ADA,C0,3
+14,ffhq,Rotation,PCA,W,to_rgs.0.upsample,StyleGAN_ADA,C2,3
+15,ffhq,"Race, Sex,Slight Rotation, Glasses Addition",PCA,W,to_rgs.0.upsample,StyleGAN_ADA,C11,3
+16,ffhq,"Sex, Age, Slight Rotation",PCA,W,to_rgs.0.upsample,StyleGAN_ADA,C10,3
+17,ffhq,"Sex, Rotation",PCA,W,to_rgs.0.upsample,StyleGAN_ADA,C11,3
+18,ffhq,"Rotation, Race, Sex, Glasses Addition",PCA,W,to_rgs.0.upsample,StyleGAN_ADA,C7,3
+19,ffhq,"Age, Slight Rotation",PCA,W,to_rgs.0,StyleGAN_ADA,C3,3
+20,ffhq,"Slight Rotation, Sex, Hair Color, Hair Quantity",PCA,W,to_rgs.0,StyleGAN_ADA,C6,3
+21,ffhq,"Age, Slight Rotation, Hair Length",PCA,W,to_rgs.0,StyleGAN_ADA,C9,3
+22,ffhq,"Age, Sex, Slight Rotation, Hair Quantity",PCA,W,to_rgs.0,StyleGAN_ADA,C6,3
+23,ffhq,"Glasses Addition,  Age, Slight Rotation",PCA,W,to_rgs.0,StyleGAN_ADA,C11,3
+24,ffhq,"Sex, Clothes",PCA,W,to_rgs.0,StyleGAN_ADA,C8,3
+25,ffhq,"Beard, Age, Background, Glasses Addition, Hat Addition",PCA,W,convs.3.conv.modulation,StyleGAN_ADA,C10,3
+26,ffhq,"Sex, Age",PCA,W,convs.3.conv.modulation,StyleGAN_ADA,C8,3
+27,ffhq,"Smile, Glasses Addition",PCA,W,convs.3.conv.modulation,StyleGAN_ADA,C12,3
+28,ffhq,"Age, Hair Quantity, Hat Addition",PCA,W,convs.3.conv.modulation,StyleGAN_ADA,C10,3
+29,ffhq,Rotation,PCA,W,convs.3.conv.modulation,StyleGAN_ADA,C3,3
+30,ffhq,"Race, Hair Color, Background",PCA,W,convs.3.conv.modulation,StyleGAN_ADA,C11,3
+31,ffhq,"Age, Hair Style",PCA,W,convs.3.conv.modulation,StyleGAN_ADA,C9,3
+32,ffhq,"Glasses Addition, Hair Quantity",PCA,W,convs.2.conv.modulation,StyleGAN_ADA,C12,3
+33,ffhq,"Age, Sex",PCA,W,convs.2.conv.modulation,StyleGAN_ADA,C8,3
+34,ffhq,"Glasses Addition, Hair Color, Smile",PCA,W,convs.2.conv.modulation,StyleGAN_ADA,C12,3
+35,ffhq,"Hair Color, Hair Style, Smile",PCA,W,convs.2.conv.modulation,StyleGAN_ADA,C12,3
+36,ffhq,"Hair Quantity, Glasses Addition",PCA,W,convs.2.conv.modulation,StyleGAN_ADA,C12,3
+37,ffhq,"Skin tone, Smile",PCA,W,convs.2.conv.modulation,StyleGAN_ADA,C11,3
+38,ffhq,"Beard, Glasses Addition, Clothes",PCA,W,convs.2.conv.modulation,StyleGAN_ADA,C9,3
+39,ffhq,"Age, Sex, Glasses Addition, Hair Color, Hair Quantity",PCA,W,convs.1.conv.modulation,StyleGAN_ADA,C9,3
+40,ffhq,"Age, Sex, Clothes, Background, Hat Addition",PCA,W,convs.1.conv.modulation,StyleGAN_ADA,C2,3
+41,ffhq,"Hair Color, Hair Style",PCA,W,convs.1.conv.modulation,StyleGAN_ADA,C9,3
+42,ffhq,"Sex, Glasses Addition, Hair Quantity, Hair Length",PCA,W,convs.1.conv.modulation,StyleGAN_ADA,C9,3
+43,ffhq,"Hair Quantity, Race, Smile",PCA,W,convs.1.conv.modulation,StyleGAN_ADA,C11,3
+44,ffhq,"Hair Color, Age",PCA,W,convs.1.conv.modulation,StyleGAN_ADA,C13,3
+45,ffhq,"Age, Clothing",PCA,W,convs.0.conv.modulation,StyleGAN_ADA,C1,3
+46,ffhq,"Glasses, Hair Length",PCA,W,convs.0.conv.modulation,StyleGAN_ADA,C7,3
+47,ffhq,"Race, Hair Style",PCA,W,convs.0.conv.modulation,StyleGAN_ADA,C7,3
+48,ffhq,Hair Color,PCA,W,convs.0.conv.modulation,StyleGAN_ADA,C10,3
+49,ffhq,"Sex, Gender, Hat Addition, Rotation",PCA,W,convs.0.conv.modulation,StyleGAN_ADA,C1,3
+50,ffhq,"Race, Hat Addition,  Glasses Addition, Hair Quantity",PCA,W,convs.0.conv.modulation,StyleGAN_ADA,C0,3
+51,ffhq,"Sex, Slight Rotation, Age, Hair Length",PCA,W,convs.0.conv.modulation,StyleGAN_ADA,C5,3
+52,ffhq,"Beard, Hair Quantity, Age, Glass Addition",PCA,W,to_rgb1.conv.modulation,StyleGAN_ADA,C8,3
+53,ffhq,"Race, Hair Color, Hair Length, Rotation",PCA,W,to_rgb1.conv.modulation,StyleGAN_ADA,C8,3
+54,ffhq,Hair Color,PCA,W,to_rgb1.conv.modulation,StyleGAN_ADA,C11,3
+55,ffhq,"Race, Age, Sex, Hair Quantity",PCA,W,to_rgb1.conv.modulation,StyleGAN_ADA,C8,3
+56,ffhq,"Sex, Age",PCA,W,to_rgb1.conv.modulation,StyleGAN_ADA,C13,3
+57,ffhq,"Slight Rotation, Glasses Addition, Hair Style",PCA,W,to_rgb1.conv,StyleGAN_ADA,C8,3
+58,ffhq,"Age, Hair Quantity",PCA,W,to_rgb1.conv,StyleGAN_ADA,C11,3
+59,ffhq,"Sex, Hair Color ",PCA,W,to_rgb1.conv,StyleGAN_ADA,C11,3
+60,ffhq,"Sex, Hair Quantity",PCA,W,to_rgb1.conv,StyleGAN_ADA,C11,3
+61,ffhq,"Age, Sex, Hair Color, Rotation",PCA,W,to_rgb1.conv,StyleGAN_ADA,C6,3
+62,ffhq,"Age, Rotation",PCA,W,to_rgb1,StyleGAN_ADA,C5,3
+63,ffhq,"Glasses Addition, Slight Rotation",PCA,W,to_rgb1,StyleGAN_ADA,C8,3
+64,ffhq,"Age, Sex, Hair Quantity, Hair Color",PCA,W,to_rgb1,StyleGAN_ADA,C9,3
+65,ffhq,"Age, Hair Color",PCA,W,to_rgb1,StyleGAN_ADA,C10,3
+66,ffhq,"Hair Color, Gender, Age, Hair Style",PCA,W,style,StyleGAN_ADA,C12,3
+67,ffhq,"Age, Glasses Addition",PCA,W,style,StyleGAN_ADA,C10,3
+68,ffhq,"Age, Gender",PCA,W,style,StyleGAN_ADA,C12,3
+69,ffhq,"Rotation, Gender, Hat Addition",PCA,W,style,StyleGAN_ADA,C2,3
+70,ffhq,"Age, Sex, Glasses Addition, Hair Color, Hair Quantity",PCA,W,style,StyleGAN_ADA,C8,3
+71,ffhq,Beard,PCA,W,conv1.conv.modulation,StyleGAN_ADA,C11,3
+72,ffhq,"Glasses, Hair Style",PCA,W,conv1.conv.modulation,StyleGAN_ADA,C10,3
+73,ffhq,"Race, Sex",PCA,W,conv1.conv.modulation,StyleGAN_ADA,C10,3
+74,ffhq,"Age, Glasses Addition",PCA,W,conv1.conv.modulation,StyleGAN_ADA,C6,3
+75,car,"Rotation, Crushed",PCA,W,conv1.conv.modulation,StyleGAN2,C1,3
+76,car,"Rotation, Crushed,Color,Oldness, Model",PCA,W,conv1.conv.modulation,StyleGAN2,C13,3
+77,car,"Color, Background",PCA,W,conv1.conv.modulation,StyleGAN2,C10,3
+78,car,"Background, Color, Model",PCA,W,conv1.conv.modulation,StyleGAN2,C12,3
+79,car,"Rotation, Model, Background",PCA,W,conv1.conv.modulation,StyleGAN2,C2,3
+80,car,"Rotation, Model, Background, Color",PCA,W,conv1.conv.modulation,StyleGAN2,C12,3
+81,car,"Background, Model",PCA,W,conv1.conv.modulation,StyleGAN2,C13,3
+82,car,"Background, Model, Color, Oldness",PCA,W,conv1.conv.modulation,StyleGAN2,C10,3
+83,car,"Rotation, Model, Background,Vision",PCA,W,conv1.conv.modulation,StyleGAN2,C2,3
+84,car,"Model, Color, Oldness",PCA,W,conv1.conv.modulation,StyleGAN2,C11,3
+85,car,"Model, Color, Oldness,Background",PCA,W,conv1.conv.modulation,StyleGAN2,C10,3
+86,car,"Model, Oldness, Background",PCA,W,conv1.conv.modulation,StyleGAN2,C10,3
+87,car,"Rotation, Crushed, Oldness,",PCA,W,conv1.conv.modulation,StyleGAN2,C0,3
+88,car,"Rotation, Crushed, Model, Vision",PCA,W,conv1.conv.modulation,StyleGAN2,C0,3
+89,car,"Color, Model, Rotation, Background",PCA,W,conv1.conv.modulation,StyleGAN2,C0,3
+90,car,"Model, Color, Background",PCA,W,conv1.conv.modulation,StyleGAN2,C11,3
+91,car,"Model, Color, Oldness",PCA,W,conv0.conv.modulation,StyleGAN2,C9,3
+92,car,"Model, Dimensions of Car, No Car",PCA,W,conv0.conv.modulation,StyleGAN2,C2,3
+93,car,"Background, Model, Oldness",PCA,W,conv0.conv.modulation,StyleGAN2,C11,3
+94,car,"Background, Model, Oldness, Color, Rotation",PCA,W,conv0.conv.modulation,StyleGAN2,C11,3
+95,car,"Model, Color, Oldness",PCA,W,conv0.conv.modulation,StyleGAN2,C11,3
+96,car,"Background, Model, Oldness",PCA,W,conv0.conv.modulation,StyleGAN2,C8,3
+97,car,"Background, Model, Oldness, Color, Rotation",PCA,W,to_rgb1,StyleGAN2,C11,3
+98,car,"Color, Background,Crushed",PCA,W,to_rgb1,StyleGAN2,C6,3
+99,car,"Color, Background, Model",PCA,W,to_rgb1,StyleGAN2,C13,3
+100,car,"Color,Model, Background, Oldness",PCA,W,to_rgb1,StyleGAN2,C12,3
+101,car,"Color, Model, Rotation",PCA,W,to_rgb1,StyleGAN2,C13,3
+102,car,"Vision, Model, Color, Background",PCA,W,to_rgb1,StyleGAN2,C9,3
+103,car,"Rotation, Model, Background",PCA,W,to_rgb1,StyleGAN2,C5,3
+104,car,"Model, Rotation, Color, Crushed",PCA,W,to_rgb1.conv,StyleGAN2,C11,3
+105,car,"Model, Rotation, Color, Crushed, Background",PCA,W,to_rgb1.conv,StyleGAN2,C7,3
+106,car,"Model, Background, Rotation",PCA,W,to_rgb1.conv,StyleGAN2,C1,3
+107,car,"Model, Background, Rotation",PCA,W,to_rgb1.conv,StyleGAN2,C7,3
+108,car,"Model, Background, Color",PCA,W,to_rgb1.conv,StyleGAN2,C13,3
+109,car,"Model, Color, Background",PCA,W,to_rgb1.conv,StyleGAN2,C9,3
+110,car,"Model, Color, Rotation, Vision",PCA,W,to_rgb1.conv,StyleGAN2,C7,3
+111,car,"Model, Color, Rotation, Background",PCA,W,to_rgb1.conv,StyleGAN2,C3,3
+112,car,"Rotation, Background",PCA,W,to_rgb1.conv,StyleGAN2,C2,3
+113,car,"Rotation, Background, Color, Model, Crushed",PCA,W,to_rgb1.conv.modulation,StyleGAN2,C11,3
+114,car,"Color, Background, Crushed",PCA,W,to_rgb1.conv.modulation,StyleGAN2,C10,3
+115,car,"Color, Background, Model, Rotation",PCA,W,to_rgb1.conv.modulation,StyleGAN2,C13,3
+116,car,"Color, Model, Rotation, Background",PCA,W,to_rgb1.conv.modulation,StyleGAN2,C9,3
+117,car,"Color, Background,Shape",PCA,W,to_rgb1.conv.modulation,StyleGAN2,C13,3
+118,car,"Color,Model, Background, Oldness",PCA,W,to_rgb1.conv.modulation,StyleGAN2,C11,3
+119,car,"Color,Shape, Model",PCA,W,to_rgb1.conv.modulation,StyleGAN2,C10,3
+120,car,"Color,Shape, Model, Background",PCA,W,to_rgb1.conv.modulation,StyleGAN2,C10,3
+121,car,"Shape, Background, Model",PCA,W,to_rgb1.conv.modulation,StyleGAN2,C10,3
+122,kitchen,"Color, Shape, Objects:Tables,Chairs, Lights ",PCA,W,to_rgbs.0,StyleGAN2,C9,3
+123,kitchen,"Color, Style, Objects:Tables,Chairs, Window",PCA,W,to_rgbs.0,StyleGAN2,C8,3
+124,kitchen,"Color, Shape. Rotation, Style, Objects Add",PCA,W,to_rgbs.0,StyleGAN2,C11,3
+125,kitchen,"Color, Shape, Rotation, Style, Window, Objects",PCA,W,to_rgbs.0,StyleGAN2,C4,3
+126,kitchen,"Color,Shape, Rotation, Style, Window, Objects",PCA,W,to_rgbs.0,StyleGAN2,C10,3
+127,kitchen,"Color, Shape.Style, Objects",PCA,W,to_rgbs.0,StyleGAN2,C11,3
+128,kitchen,"Color, Shape, Style, Rotation, Objects",PCA,W,to_rgbs.0,StyleGAN2,C13,3
+129,kitchen,"Color, Rotation, Shape, Style",PCA,W,to_rgbs.0,StyleGAN2,C9,3
+130,kitchen,"Color, Rotation, Shape, Style, Objects",PCA,W,to_rgbs.1,StyleGAN2,C11,3
+131,kitchen,"Color, Window, Objects",PCA,W,to_rgbs.1,StyleGAN2,C12,3
+132,kitchen,"Color, Shape, Rotation, Style, Window, Objects",PCA,W,to_rgbs.1,StyleGAN2,C5,3
+133,kitchen,"Color, Shape, Rotation, Style, Window, Objects",PCA,W,to_rgbs.1,StyleGAN2,C8,3
+134,kitchen,"Color, Shape, Rotation, Style, Window, Objects",PCA,W,to_rgbs.1,StyleGAN2,C10,3
+135,kitchen,"Rotation, Window, Style, Objects,Shape",PCA,W,to_rgbs.1.conv,StyleGAN2,C11,3
+136,kitchen,"Window,Objects, Style, Color",PCA,W,to_rgbs.1.conv,StyleGAN2,C4,3
+137,kitchen,"Rotation, Style, Remove Kitchen, Color",PCA,W,to_rgbs.1.conv,StyleGAN2,C3,3
+138,kitchen,"Rotation, Objects, Light, Color, Window",PCA,W,to_rgbs.1.conv,StyleGAN2,C2,3
+139,kitchen,"Rotation, Objects, Light, Color, Window",PCA,W,to_rgbs.1.conv.modulation,StyleGAN2,C2,3
+140,kitchen,"Window,Objects, Style, Color",PCA,W,to_rgbs.1.conv.modulation,StyleGAN2,C5,3
+141,kitchen,"Window,Objects, Style, Color, Light",PCA,W,to_rgbs.1.conv.modulation,StyleGAN2,C13,3
+142,kitchen,"Color, Shape, Remove Kitchen, Objects",PCA,W,to_rgbs.1.conv.modulation,StyleGAN2,C9,3
+143,kitchen,"Color, Rotation, Objects, Shape",PCA,W,to_rgbs.1.conv.modulation,StyleGAN2,C8,3
+144,kitchen,"Color, Rotation, Objects, Shape, Window",PCA,W,to_rgbs.1.upsample,StyleGAN2,C10,3
+145,kitchen,"Color, Window, Objects, Shape",PCA,W,to_rgbs.1.upsample,StyleGAN2,C13,3
+146,kitchen,"Rotation, Shape,Light, Objects",PCA,W,to_rgbs.1.upsample,StyleGAN2,C9,3
+147,kitchen,"Color, Shape, Style, Window, Objects",PCA,W,to_rgbs.2.conv.modulation,StyleGAN2,C11,3
+148,kitchen,"Color, Window, Light, Style, Objects",PCA,W,to_rgbs.2.conv.modulation,StyleGAN2,C0,3
+149,kitchen,"Color, Shape, Darkness, Quality, Style",PCA,W,to_rgbs.2.conv.modulation,StyleGAN2,C11,3
+150,kitchen,"Color, Window, Shape, Style, Objects",PCA,W,to_rgbs.3.conv.modulation,StyleGAN2,C11,3
+151,kitchen,"Window, Style, Objects, Light, Color",PCA,W,to_rgbs.3.conv.modulation,StyleGAN2,C5,3
+152,kitchen,"Window, Style, Object, Color",PCA,W,to_rgbs.3.conv.modulation,StyleGAN2,C12,3
+153,horse,"Zoom, Pose",SVD,W,style,StyleGAN2,C0,3
+154,horse,"Rider identity, Pose",SVD,W,style,StyleGAN2,C1,3
+155,horse,"Rider identity, Background",SVD,W,style,StyleGAN2,C2,3
+156,horse,Rider number,SVD,W,style,StyleGAN2,C3,3
+157,horse,"Rider action, zoom",SVD,W,style,StyleGAN2,C4,3
+158,horse,Pose,SVD,W,style,StyleGAN2,C5,3
+159,horse,"Color, Rider identity",SVD,W,style,StyleGAN2,C9,3
+160,horse,Color,SVD,W,style,StyleGAN2,C11,3
+161,church,Identity,RPCA,W,style,StyleGAN2,C0,2
+162,church,Identity,RPCA,W,style,StyleGAN2,C3,2
+163,church,Rotation,RPCA,W,style,StyleGAN2,C4,2
+164,church,Identity,RPCA,W,style,StyleGAN2,C5,2
+165,church,Identity,RPCA,W,style,StyleGAN2,C6,2
+166,church,Identity,RPCA,W,style,StyleGAN2,C7,2
+167,church,Identity,RPCA,W,style,StyleGAN2,C8,2
+168,cat,zoom,RPCA,Z,generator.gen_z,BigGAN-512,C1,2
+169,cat,zoom,RPCA,Z,generator.gen_z,BigGAN-512,C2,2
+170,cat,pose change,RPCA,Z,generator.gen_z,BigGAN-512,C3,2
+171,cat,head and body rotation,RPCA,Z,generator.gen_z,BigGAN-512,C4,2
+172,cat,"inverse zoom, head and body rotation",RPCA,Z,generator.gen_z,BigGAN-512,C6,2
+173,cat,inverse zoom ,RPCA,Z,generator.gen_z,BigGAN-512,C7,2
+174,cat,zoom,RPCA,Z,generator.gen_z,BigGAN-512,C8,2
+175,cat,slight head rotation,RPCA,Z,generator.gen_z,BigGAN-512,C10,2
+176,American eagle,flying to sitting,PCA,Z,generator.gen_z,BigGAN-512,C1,2
+177,American eagle,flying to sitting,PCA,Z,generator.gen_z,BigGAN-512,C2,2
+178,American eagle,flying to sitting,PCA,Z,generator.gen_z,BigGAN-512,C3,2
+179,American eagle,head and body rotation,PCA,Z,generator.gen_z,BigGAN-512,C4,2
+180,American eagle,sitting to flying,PCA,Z,generator.gen_z,BigGAN-512,C6,2
+181,American eagle,sitting to flying,PCA,Z,generator.gen_z,BigGAN-512,C7,2
+182,American eagle,slight inverse zoom,PCA,Z,generator.gen_z,BigGAN-512,C9,2
+183,American robin,slight rotation,PCA,Z,generator.gen_z,BigGAN-512,C0,2
+184,American robin,"head and body rotation, zoom",PCA,Z,generator.gen_z,BigGAN-512,C1,2
+185,American robin,"head and body rotation, zoom, ground change",PCA,Z,generator.gen_z,BigGAN-512,C2,2
+186,American robin,head and body rotation,PCA,Z,generator.gen_z,BigGAN-512,C3,2
+187,American robin,head and body rotation,PCA,Z,generator.gen_z,BigGAN-512,C4,2
+188,American robin,"ground and background change, slight pose change",PCA,Z,generator.gen_z,BigGAN-512,C5,2
+189,American robin,"head and body rotation, background change",PCA,Z,generator.gen_z,BigGAN-512,C6,2
+190,American robin,slight rotation and inverse zoom,PCA,Z,generator.gen_z,BigGAN-512,C7,2
+191,American robin,"zoom, ground and background change",PCA,Z,generator.gen_z,BigGAN-512,C8,2
+192,American robin,head and body rotation,PCA,Z,generator.gen_z,BigGAN-512,C10,2
+193,American robin,slight ground change,PCA,Z,generator.gen_z,BigGAN-512,C12,2
+194,brambling,"head rotation, slight body rotation, background change",PCA,Z,generator.gen_z,BigGAN-512,C0,2
+195,brambling,"head and body rotation, zoom",PCA,Z,generator.gen_z,BigGAN-512,C1,2
+196,brambling,"head and body rotation, background change",PCA,Z,generator.gen_z,BigGAN-512,C2,2
+197,brambling,head and body rotation. background change,PCA,Z,generator.gen_z,BigGAN-512,C3,2
+198,brambling,head and body rotation. background change,PCA,Z,generator.gen_z,BigGAN-512,C4,2
+199,brambling,"slight head rotation, background change",PCA,Z,generator.gen_z,BigGAN-512,C5,2
+200,brambling,"head and body rotation, background change",PCA,Z,generator.gen_z,BigGAN-512,C6,2
+201,brambling,"head rotation, inverse zoom",PCA,Z,generator.gen_z,BigGAN-512,C7,2
+202,brambling,"slight zoom, background blur",PCA,Z,generator.gen_z,BigGAN-512,C8,2
+203,brambling,"head rotation, slight body rotation",PCA,Z,generator.gen_z,BigGAN-512,C9,2
+204,brambling,"background blur, head and body rotation",PCA,Z,generator.gen_z,BigGAN-512,C10,2
+205,brambling,background sharpening,PCA,Z,generator.gen_z,BigGAN-512,C11,2
+206,brambling,Background change,PCA,Z,generator.gen_z,BigGAN-512,C12,2
+207,bilbul,"slight head rotation, background blur",PCA,Z,generator.gen_z,BigGAN-512,C0,2
+208,bilbul,zoom,PCA,Z,generator.gen_z,BigGAN-512,C1,2
+209,bilbul,"slight head rotation, zoom",PCA,Z,generator.gen_z,BigGAN-512,C2,2
+210,bilbul,head and body rotation,PCA,Z,generator.gen_z,BigGAN-512,C3,2
+211,bilbul,"head and body rotation, background blur",PCA,Z,generator.gen_z,BigGAN-512,C4,2
+212,bilbul,"slight head rotation, background change",PCA,Z,generator.gen_z,BigGAN-512,C5,2
+213,bilbul,"head and body rotation, ground change",PCA,Z,generator.gen_z,BigGAN-512,C6,2
+214,bilbul,"slight head and body rotaiton, slight inverse zoom",PCA,Z,generator.gen_z,BigGAN-512,C7,2
+215,bilbul,ground change,PCA,Z,generator.gen_z,BigGAN-512,C8,2
+216,bilbul,"head and body rotation, ground change",PCA,Z,generator.gen_z,BigGAN-512,C9,2
+217,bilbul,head and body rotation,PCA,Z,generator.gen_z,BigGAN-512,C10,2
+218,wikiart,"Style, Exposure",PCA,W,g_mapping,StyleGAN,C0,2
+219,wikiart,"Colors, Style",PCA,W,g_mapping,StyleGAN,C1,2
+220,wikiart,"Colors, Style",PCA,W,g_mapping,StyleGAN,C2,2
+221,wikiart,Identity,PCA,W,g_mapping,StyleGAN,C3,2
+222,wikiart,"Identity, Rotation",PCA,W,g_mapping,StyleGAN,C7,2
+223,wikiart,Colors,PCA,W,g_mapping,StyleGAN,C8,2
+224,bedrooms,Viewing angle,IPCA,W,g_mapping,StyleGAN,C0,2
+225,bedrooms,Viewing angle,IPCA,W,g_mapping,StyleGAN,C2,3
+226,bedrooms,Identity,IPCA,W,g_mapping,StyleGAN,C3,3
+227,bedrooms,Viewing angle,IPCA,W,g_mapping,StyleGAN,C4,3
+228,bedrooms,Identity,IPCA,W,g_mapping,StyleGAN,C7,3
+229,bedrooms,Identity,IPCA,W,g_mapping,StyleGAN,C13,3
+230,bedrooms,Viewing angle,PCA,W,g_mapping,StyleGAN,C0,3
+231,bedrooms,"Illumination, Identity",PCA,W,g_mapping,StyleGAN,C2,3
+232,bedrooms,Identity,PCA,W,g_mapping,StyleGAN,C13,3
+233,bedrooms,Viewing angle,SVD,W,g_mapping,StyleGAN,C0,3
+234,bedrooms,"Illumination, Identity",SVD,W,g_mapping,StyleGAN,C2,3
+235,bedrooms,Identity,SVD,W,g_mapping,StyleGAN,C3,3
+236,bedrooms,Identity,SVD,W,g_mapping,StyleGAN,C7,3
+237,bedrooms,Identity,SVD,W,g_mapping,StyleGAN,C13,3
+238,bedrooms,Viewing angle,FBPCA,W,g_mapping,StyleGAN,C0,3
+239,bedrooms,"Illumination, Identity",FBPCA,W,g_mapping,StyleGAN,C2,3
+240,bedrooms,Identity,FBPCA,W,g_mapping,StyleGAN,C7,3
+241,bedrooms,Identity,FBPCA,W,g_mapping,StyleGAN,C13,3
+242,celebahq,"Identity, Skin Tone, Hair, Background",SVD,W,g_mapping,StyleGAN,C0,3
+243,celebahq,"Gender, Accessories",SVD,W,g_mapping,StyleGAN,C1,3
+244,celebahq,Skin Tone,SVD,W,g_mapping,StyleGAN,C6,3
+245,celebahq,Head Rotation,SVD,W,g_mapping,StyleGAN,C7,3
+246,celebahq,"Skin Tone, Race",SVD,W,g_mapping,StyleGAN,C8,3
+247,celebahq,"Make up, Skin Tone",SVD,W,g_mapping,StyleGAN,C9,3
+248,celebahq,Glasses,SVD,W,g_mapping,StyleGAN,C10,3
+249,celebahq,Head Angle,SVD,W,g_mapping,StyleGAN,C11,3
+250,celebahq,Mouth,SVD,W,g_mapping,StyleGAN,C12,3
+251,celebahq,"Face shape, Skin Tone",SVD,W,g_mapping,StyleGAN,C13,3
+252,celebahq,"Identity, Skin Tone, Hair, Background",FBPCA,W,g_mapping,StyleGAN,C0,3
+253,celebahq,Gender,FBPCA,W,g_mapping,StyleGAN,C2,3
+254,celebahq,"Skin Tone, Race",FBPCA,W,g_mapping,StyleGAN,C8,3
+255,celebahq,"Make up, Skin Tone",FBPCA,W,g_mapping,StyleGAN,C9,3
+256,ffhq,"Gender, Age, Outfit",PCA,W,g_mapping,StyleGAN,C2,3
+257,ffhq,Age,PCA,W,g_mapping,StyleGAN,C3,3
+258,ffhq,Gender,PCA,W,g_mapping,StyleGAN,C4,3
+259,ffhq,Age,PCA,W,g_mapping,StyleGAN,C5,3
+260,ffhq,Head Rotation,PCA,W,g_mapping,StyleGAN,C8,3
+261,ffhq,Head Rotation,PCA,W,g_mapping,StyleGAN,C9,3
+262,ffhq,"Face angle, Age",PCA,W,g_mapping,StyleGAN,C10,3
+263,ffhq,Hair,SVD,W,g_mapping,StyleGAN,C6,3
+264,ffhq,Age,SVD,W,g_mapping,StyleGAN,C5,3
+265,ffhq,"Gender, Age",SVD,W,g_mapping,StyleGAN,C2,3
+266,ffhq,"Gender, Age, Outfit",SVD,W,g_mapping,StyleGAN,C1,3
+267,ffhq,"Hair, Identity",SVD,W,g_mapping,StyleGAN,C13,3
+268,ffhq,Age,SVD,W,g_mapping,StyleGAN,C12,3
+269,ffhq,Face angle,SVD,W,g_mapping,StyleGAN,C11,3
+270,ffhq,"Face angle, Age",SVD,W,g_mapping,StyleGAN,C10,3
+271,ffhq,"Head Rotation, Hair",SVD,W,g_mapping,StyleGAN,C9,3
+272,ffhq,"Head Rotation, Hair",SVD,W,g_mapping,StyleGAN,C8,3
+273,ffhq,"Identity, Age, Smile, Hair",SVD,W,g_mapping,StyleGAN,C7,3
+274,ukiyoe,Color,ICA,W,g_mapping,StyleGAN,C0,3
+275,ukiyoe,"Color, Face Shape",RPCA,W,g_mapping,StyleGAN,C4,3
+276,ukiyoe,"Identity, Color",RPCA,W,g_mapping,StyleGAN,C5,3
+277,ukiyoe,Color,RPCA,W,g_mapping,StyleGAN,C6,3
+278,ukiyoe,"Color, Edges",RPCA,W,g_mapping,StyleGAN,C7,3
+279,ukiyoe,Color,RPCA,W,g_mapping,StyleGAN,C8,3
+280,ukiyoe,Color,RPCA,W,g_mapping,StyleGAN,C9,3
+281,ukiyoe,Color,RPCA,W,g_mapping,StyleGAN,C11,3
+282,ukiyoe,Color,RPCA,W,g_mapping,StyleGAN,C13,3
+283,vases,"Exposure, Shape, Identity",RPCA,W,g_mapping,StyleGAN,C0,3
+284,vases,Identity,RPCA,W,g_mapping,StyleGAN,C1,3
+285,vases,"Identity, Color",RPCA,W,g_mapping,StyleGAN,C2,3
+286,vases,"Identity, Size, Shape",RPCA,W,g_mapping,StyleGAN,C3,3
+287,vases,Identity,RPCA,W,g_mapping,StyleGAN,C4,3
